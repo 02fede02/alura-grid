@@ -1,0 +1,78 @@
+.section__featured {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 33.33% 33.33% 33.33%;
+    gap: .3rem;
+    height: calc(110vh - 50px);
+
+    &__div-principal {
+        @include featuredDiv("../img/fortnite.jpg", 1, 4, 1, 3);
+    }
+
+    &__div-secondary:nth-child(2) {
+        @include featuredDiv("../img/pubg.jpg", 4, 5, 1, 2);
+    }
+
+    &__div-secondary:nth-child(3) {
+        @include featuredDiv("../img/slack.png", 4, 5, 2, 3);
+    }
+
+    &__div-secondary:nth-child(4) {
+        @include featuredDiv("../img/whatsapp.png", 4, 5, 3, 4);
+    }
+
+    &__div-secondary:nth-child(5) {
+        @include featuredDiv("../img/cs-go.jpg", 3, 4, 3, 4);
+    }
+
+    &__div-secondary:nth-child(2), &__div-secondary:nth-child(3), &__div-secondary:nth-child(4), &__div-secondary:nth-child(5){
+        @include mv{
+            display: none;
+            grid-column: none;
+            grid-row: none;
+        }
+    }
+
+    &__div-category {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+
+    &__div-principal, &__div-category{
+        @include mv{grid-column: 1 / 5;}
+    }
+
+    &__ul {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    &__li {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        padding: 1rem;
+        color: $color-2;
+        background-color: $color-4;
+    }
+
+    &__a {
+        color: inherit;
+    }
+
+    &__h3 {
+        color: $color-4;
+        background: rgb(0, 0, 0, 0.5);
+        width: 100%;
+        text-align: center;
+        padding: .6rem;
+    }
+
+    &__box {
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+}

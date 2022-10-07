@@ -1,0 +1,13 @@
+@mixin mv( $medida: 768px){
+    @media screen and (max-width: $medida){
+        @content;
+    }
+}
+
+@mixin featuredDiv($src, $colStart, $colEnd, $rowStart, $rowEnd){
+    background: url($src) center / cover no-repeat;
+    grid-column-start: $colStart;
+    grid-column-end: $colEnd;
+    grid-row-start: $rowStart;
+    grid-row-end: $rowEnd;
+}

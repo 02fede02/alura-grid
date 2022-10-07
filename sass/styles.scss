@@ -1,0 +1,10 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "app.scss";
+@import "header.scss";
+@import "featured.scss";
+
+.main{
+    grid-area: main;
+    padding: 0 2rem;
+}

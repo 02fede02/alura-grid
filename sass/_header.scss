@@ -1,0 +1,21 @@
+.header{
+    grid-area: header;
+    padding: 1rem 2rem;
+
+    &__ul{
+        display: flex;
+    }
+
+    &__a{
+        color: $color-2;
+        padding: .5rem 1rem;
+
+        &:hover, &:active{
+            border-bottom: 2px solid $color-3;
+        }
+
+        @include mv{
+            padding: .5rem 0.5rem;
+        }
+    }
+}
