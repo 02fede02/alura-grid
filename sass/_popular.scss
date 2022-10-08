@@ -1,0 +1,110 @@
+.section__popular{
+    padding: 3rem 0;
+
+    &__div-header{
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem;
+    }
+
+    &__div-content{
+        grid-area: main;
+        display: flex;
+        flex: wrap;
+        padding: 1rem auto;
+
+        @include mv{
+            flex-direction: column;
+        }
+    }
+
+    &__div-card{
+        display: grid;
+        grid-template-areas: 
+        "card-img"
+        "card-base";
+        grid-template-columns: 100%;
+        grid-template-rows: 173px auto;
+        margin-right: 1rem;
+        width: calc(20% - 1rem);
+        background-color: $color-4;
+
+        &-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-bottom: 1px solid $color-6;
+
+            @include mv{
+                text-align: center;
+            }
+        }
+
+        &-description{
+            grid-area: card-description;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1rem 0;
+            margin: 1rem 0;
+            text-align: justify;
+            line-height: 1.5;
+            color: $color-2;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+
+        @include mv{
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__img{
+        grid-area: card-img;
+        height: 100%;
+        width: 100%;
+
+        @include mv{
+            width: 50%;
+            margin: .5rem auto;
+        }
+    }
+
+    &__div-base{
+        grid-area: card-base;
+        display: grid;
+        grid-row-gap: .5rem;
+        grid-template-areas: 
+        "card-header"
+        "card-description";
+        grid-template-rows: 50px auto;
+        padding: .75rem;
+    }
+
+    &__h4{
+        font-weight: 500;
+    }
+
+    &__i{
+        margin-right: .25rem;
+    }
+
+    &__h5{
+        font-size: 1.5rem;
+        color: $color-2;
+    }
+
+    &__time{
+        font-size: .9rem;
+        color: $color-5;
+    }
+
+    &__button{
+        color: $color-2;
+        border: none;
+        background-color: transparent;
+    }
+
+}
